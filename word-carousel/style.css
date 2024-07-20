@@ -1,0 +1,43 @@
+:root {
+    --bg-word: #5134ff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1:after {
+    content: "";
+    animation: swap 4s infinite;
+    background-color: var(--bg-word);
+    color: #fff;
+    padding: .5em;
+    margin-left: .2em;
+    border-radius: 10px;
+}
+
+@keyframes swap {
+    0% {
+        content: "Eat";
+    }
+    25% {
+        content: "Sleep";
+    }
+    50% {
+        content: "Code";
+    }
+    75% {
+        content: "Repeat";
+    }
+    100% {
+        content: "Eat";
+    }
+}
