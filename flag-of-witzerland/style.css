@@ -1,0 +1,46 @@
+:root { 
+    --white: #fff;
+    --red: #FF0002;
+    --flag-hw: 200px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.flag-swiss {
+    height: var(--flag-hw);
+    width: var(--flag-hw);
+    background: var(--red);
+    margin: calc(50vh - var(--flag-hw) / 2) auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .cross1 {
+    height: calc(var(--flag-hw) * 3/16);
+    width: calc(var(--flag-hw) * 5/8);
+    background: var(--white);
+}
+
+.cross2 {
+    height: calc(var(--flag-hw) * 5/8);
+    width: calc(var(--flag-hw) * 3/16);
+    background: var(--white);
+    position: absolute;
+} */
+
+.cross {
+    height: calc(var(--flag-hw) * 3/16);
+    width: calc(var(--flag-hw) * 5/8);
+    background: var(--white);
+}
+
+.cross2 {
+    transform: rotate(90deg);
+    position: absolute;
+}
+
