@@ -1,0 +1,29 @@
+body {
+    background-color: #F6F1DE;
+}
+
+.btn {
+    display: block;
+    margin: 40vh auto;
+    border: none;
+    padding: 20px 30px;
+    background-color: #ACD3A8;
+    box-shadow: 0 6px #8AB2A6;
+    font-size: 1rem;
+    color: #3E3F5B;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 20px;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0 4px #8AB2A6;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 4px;
+}
