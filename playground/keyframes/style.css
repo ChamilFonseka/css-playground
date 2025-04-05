@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    color: #000;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 150px;
+    font-family: "Merienda", cursive;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    
+    animation: 2s header-animation linear, 6s 3s float ease-in-out infinite;;
+}
+
+.hero p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    text-align: center;
+    text-wrap: pretty;
+
+    animation: 2s paragraph-animation linear reverse;
+}
+
+.blob {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    mix-blend-mode: multiply;
+    filter: blur(60px);
+    opacity: 0.8;
+
+    animation: 6s blob-animation ease-in-out infinite;
+}
+
+#blob-1 {
+    left: 30%;
+    top: 30%;
+    animation-delay: 0s;
+}
+
+#blob-1 {
+    left: 30%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+#blob-3 {
+    right: 30%;
+    top: 30%;
+    animation-delay: 4s;
+}
+
+
+@keyframes header-animation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes paragraph-animation {
+    to {
+        transform: translateX(-250%)
+    }
+}
+
+
+@keyframes blob-animation {
+    0% {
+        transform: scale(1) translate(0, 0);
+    } 
+    33% {
+        transform: scale(1.5) translate(-100px, -100px);
+    }
+    66% {
+        transform: scale(0.8) translate(50px, 50px);
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+} 
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
