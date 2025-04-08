@@ -12,11 +12,72 @@ body {
     perspective: 1000px;
 }
 
+#controls {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & input[type="radio"] {
+        display: none;
+    }
+
+    & label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    & input[type="radio"]:checked + label {
+        background-color: #60B5FF;
+    }
+
+}
+
 .cube {
     width: 200px;
     height: 200px;
     position: absolute;
     transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+body:has(#front:checked) .cube {
+    transform: rotateY(0deg);
+}
+
+body:has(#back:checked) .cube {
+    transform: rotateY(180deg);
+}
+
+body:has(#right:checked) .cube {
+    transform: rotateY(90deg);
+}
+
+body:has(#left:checked) .cube {
+    transform: rotateY(-90deg);
+}
+
+body:has(#bottom:checked) .cube {
+    transform: rotateX(90deg);
+}
+
+body:has(#top:checked) .cube {
+    transform: rotateX(-90deg);
+}
+
+/* Only animate when none of the control radio buttons are checked */
+/* body:not(:has(#controls input[type="radio"]:checked)) .cube {} */
+
+body:has(#controls input#rotate[type="radio"]:checked) .cube {
     animation: rotateCube 5s infinite linear;
 }
 
