@@ -39,3 +39,29 @@ h1 {
     background-clip: text;
     color: transparent;
 }
+
+#header4 {
+    color: transparent;
+    -webkit-text-stroke: 1px #ff7e5f;
+    position: relative;
+}
+
+#header4::before {
+    color: #ff7e5f;
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    width: 0;
+    border-right: 2px solid #ff7e5f;
+    overflow: hidden;
+    animation: animate-fill 2s linear forwards alternate infinite;
+}
+
+@keyframes animate-fill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
