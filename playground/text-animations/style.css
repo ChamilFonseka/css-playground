@@ -7,11 +7,19 @@
 body {
     display: grid;
     place-items: center;
-    height: 100vh;
 }
 
 h1 {
     font-size: 64px;
+}
+
+section {
+    position: relative;
+    width: 90vw;
+    min-height: 20vh;
+    border-bottom: 2px solid #ff7e5f;
+    display: grid;
+    place-items: center;
 }
 
 #header1 {
@@ -63,5 +71,58 @@ h1 {
     }
     100% {
         width: 100%;
+    }
+}
+
+#clip-path-1 h1 {
+    position: absolute;
+    text-transform: uppercase;
+    color: transparent;
+}
+
+#clip-path-1 h1:nth-child(1) {
+    -webkit-text-stroke: 1px skyblue;
+}
+
+#clip-path-1 h1:nth-child(1) {
+    color: skyblue;
+    animation: animate-clip-path-1 2s linear forwards alternate infinite;
+}
+
+@keyframes animate-clip-path-1 {
+    0% {
+        clip-path: polygon(0 0, 11% 16%, 21% 34%, 37% 40%, 56% 44%, 69% 43%, 83% 28%, 100% 3%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 58%, 19% 73%, 31% 81%, 48% 86%, 65% 84%, 76% 74%, 86% 56%, 100% 37%, 100% 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(3% 69%, 8% 35%, 13% 21%, 26% 6%, 43% 0, 70% 7%, 84% 19%, 100% 39%, 100% 100%, 0 100%);
+    }
+}
+
+#clip-path-2 h1:nth-child(1) {
+    animation: animate-clip-path-2 2s linear forwards alternate infinite;
+}
+
+@keyframes animate-clip-path-2 {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+#clip-path-2 h1:nth-child(2) {
+    animation: animate-clip-path-3 2s linear forwards alternate infinite;
+}
+
+@keyframes animate-clip-path-3 {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 }
