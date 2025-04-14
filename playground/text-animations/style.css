@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+#header1 {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-clip: text;
+    color: transparent;
+}
+
+#header2 {
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhzcHpja2xpcHlxMjQyOHdibmd1N3Mwdm5rcnZicDc4OTYzM3B6ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/P0oHIBTX6hPHDzvEY3/giphy.gif');
+    background-clip: text;
+    color: transparent;
+}
+
+#header3 {
+    color: transparent;
+    position: relative;
+}
+
+#header3::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-clip: text;
+    color: transparent;
+}
