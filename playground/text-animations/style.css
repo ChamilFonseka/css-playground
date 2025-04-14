@@ -23,9 +23,17 @@ section {
 }
 
 #header1 {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    --bgSize: 300%;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b) 0 0 / var(--bgSize) 100%;
     background-clip: text;
     color: transparent;
+    animation: animate-background 5s linear infinite;
+}
+
+@keyframes animate-background {
+    to {
+        background-position: var(--bgSize) 0;
+    }
 }
 
 #header2 {
