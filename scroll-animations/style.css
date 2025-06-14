@@ -5,7 +5,7 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     place-items: center;
 }
@@ -135,4 +135,25 @@ h1 {
         transform: translateY(0) scale(1);
     }
     
+}
+
+.blur-container {
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.blur {
+    animation: blur-animation linear both;
+    animation-timeline: view(50% auto);
+}
+
+@keyframes blur-animation {
+    0% {
+        filter: blur(20px);
+    }
+    100% {
+        filter: blur(0);
+    }
 }
